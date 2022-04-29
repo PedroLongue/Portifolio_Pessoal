@@ -19,10 +19,6 @@ const Contacts = () => {
     message: "",
   });
 
-  // const resetInputs = () => {
-  //   setContact({ ...contact, [e.target.name]: "" });
-  // }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setContact({ ...contact, [e.target.name]: e.target.value });
 
@@ -43,6 +39,7 @@ const Contacts = () => {
           type: "success",
           message: "Thank you for reaching out to us.",
         });
+        alert("Mensagem enviada!!");
       } else {
         setResponse({
           type: "error",
@@ -104,7 +101,6 @@ const Contacts = () => {
                 className="contacts-page__send-button"
                 type="submit"
                 value="Enviar"
-                // onChange={reset}
               />
             </form>
           </div>
