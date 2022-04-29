@@ -1,0 +1,162 @@
+@import "../../../global.scss";
+
+.main-banner-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 600px;
+  background: $purple-500;
+  padding: 15px 50px;
+
+  &__title {
+    color: $white;
+    font-family: $font-family-magra;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  &__second-title {
+    position: absolute;
+    font-size: 36px;
+    border-bottom: 3px solid $green-500;
+    animation: blinkCursor 700ms infinite normal, typing 4s steps(30) 1s normal;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 390px;
+      }
+    }
+
+    @keyframes blinkCursor {
+      from {
+        border-right: 3px solid $white;
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__gitHub-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+    margin-top: 80px;
+    background: $green-500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+
+    &:hover {
+      background: $purple-200;
+    }
+  }
+
+  &__link {
+    font-family: $font-family-magra;
+    font-size: 24px;
+    line-height: 58px;
+    color: $white;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $green-500;
+    }
+  }
+
+  @keyframes desloca {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__image {
+    margin-top: -80px;
+    animation: desloca 1s infinite alternate;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .main-banner-page {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__second-title {
+      font-size: 20px;
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 210px;
+        }
+      }
+    }
+
+    &__button {
+      margin: 47px 0px;
+      max-width: 200px;
+      height: 30px;
+    }
+
+    &__image {
+      width: 300px;
+      margin: 0 auto;
+      animation: desloca 1s infinite alternate;
+    }
+    &__link {
+      font-size: 14px;
+    }
+
+    &__gitHub-image {
+      width: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main-banner-page {
+    height: 480px;
+    &__image {
+      width: 200px;
+    }
+  }
+}

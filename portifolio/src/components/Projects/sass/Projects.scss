@@ -1,0 +1,17 @@
+@import "../../../global.scss";
+
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $purple-300;
+  padding: 50px 30px;
+
+  &__title {
+    color: $white;
+    font-family: $font-family-inter;
+    font-style: normal;
+    font-size: 36px;
+    border-bottom: 3px solid $green-500;
+  }
+}

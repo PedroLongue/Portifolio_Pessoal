@@ -1,0 +1,129 @@
+@import "../../../global.scss";
+
+.header-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0px 15px;
+  background: $purple-200;
+
+  &__nav {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__links {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $font-family-inter;
+    color: $white;
+    font-size: 20px;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      color: $green-500;
+      border-bottom: 3px solid $green-500;
+    }
+  }
+
+  &__burguer-icon-mobile {
+    display: none;
+  }
+
+  &__nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background: $purple-200;
+    width: 100vw;
+    height: 100vh;
+  }
+  &__links-mobile {
+    list-style: none;
+  }
+
+  &__link-mobile {
+    text-decoration: none;
+    color: $white;
+    font-family: $font-family-inter;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 580px) {
+    .header-page {
+      &__nav {
+        display: none;
+      }
+
+      &__burguer-icon-mobile {
+        display: flex;
+      }
+
+      &__burguer-icon-mobile-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+
+      &__burguer-icon-mobile-button.active {
+        gap: 0px;
+      }
+
+      &__burguer-icon-line,
+      &__active01,
+      &__active02 {
+        width: 40px;
+        height: 3px;
+        border-radius: 50px;
+        background: $white;
+      }
+
+      &__active01 {
+        transform: rotate(135deg);
+        gap: 0px;
+        transition: 0.8s;
+      }
+      &__active02 {
+        transform: rotate(-135deg);
+        margin-top: -3px;
+        gap: 0px;
+        transition: 0.8s;
+      }
+
+      &__active-remove {
+        display: none;
+      }
+
+      &__nav-bar {
+        display: none;
+      }
+
+      &__active-nav-bar {
+        display: block;
+        transition: 0.8s;
+        margin-top: 50px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        // transition: all 0.6s ease-in;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+      }
+
+      &__close-nav-bar-mobile {
+        display: none;
+      }
+    }
+  }
+}

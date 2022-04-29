@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portifolio_Pessoal/static/css/main.a6a1a984.css",
+    "main.js": "/Portifolio_Pessoal/static/js/main.364add1c.js",
+    "static/media/AboutIcon.png": "/Portifolio_Pessoal/static/media/AboutIcon.106fa40aa5266c360668.png",
+    "static/media/mainBannerIcon.png": "/Portifolio_Pessoal/static/media/mainBannerIcon.da45f4381249b858aecd.png",
+    "static/media/contactsIcon.png": "/Portifolio_Pessoal/static/media/contactsIcon.1aef9031879816bdbcca.png",
+    "static/media/reactIcon.png": "/Portifolio_Pessoal/static/media/reactIcon.7bc3254d393c7c958b8c.png",
+    "static/media/sassIcon.png": "/Portifolio_Pessoal/static/media/sassIcon.5389730c8d095be1d505.png",
+    "static/media/touristPageIcon.png": "/Portifolio_Pessoal/static/media/touristPageIcon.925c2431b95e99a25602.png",
+    "static/media/htmlIcon.png": "/Portifolio_Pessoal/static/media/htmlIcon.b91a8280465741bb8526.png",
+    "static/media/cssIcon.png": "/Portifolio_Pessoal/static/media/cssIcon.c26501299dd1f017c604.png",
+    "index.html": "/Portifolio_Pessoal/index.html",
+    "main.a6a1a984.css.map": "/Portifolio_Pessoal/static/css/main.a6a1a984.css.map",
+    "main.364add1c.js.map": "/Portifolio_Pessoal/static/js/main.364add1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6a1a984.css",
+    "static/js/main.364add1c.js"
+  ]
+}

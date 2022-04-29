@@ -1,0 +1,202 @@
+@import "../../../global.scss";
+
+.contacts-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $purple-500;
+  padding: 15px 50px 50px;
+
+  &__title {
+    color: $white;
+    font-family: $font-family-inter;
+    font-style: normal;
+    font-size: 36px;
+    border-bottom: 3px solid $green-500;
+  }
+
+  &__subtitle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__subtitle {
+    font-family: $font-family-inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: $white;
+  }
+
+  &__second-subtitle {
+    color: $green-500;
+  }
+
+  &____wrapper-content-infos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__wrapper-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 0px 50px;
+    margin-top: 20px;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 30px;
+    display: inherit;
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: $purple-200;
+    padding: 15px;
+    color: $white;
+    font-size: 14px;
+    font-family: $font-family-inter;
+    margin-bottom: 50px;
+
+    &::-webkit-input-placeholder {
+      font-family: $font-family-inter;
+      color: $white;
+      font-size: 14px;
+    }
+  }
+
+  &__input-message {
+    height: 200px;
+    // position: relative;
+
+    &::-webkit-input-placeholder {
+      // position: absolute;
+      // top: 20px;
+    }
+  }
+
+  @keyframes desloca {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__contacts-image {
+    margin-top: 50px;
+    width: 300px;
+    height: 400px;
+    animation: desloca 1s infinite alternate;
+  }
+
+  &__send-button {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    background: $green-500;
+    font-family: $font-family-inter;
+    background: $green-500;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background: $purple-200;
+      color: $green-500;
+    }
+  }
+
+  &__link-icon {
+    width: 25px;
+  }
+
+  &__resume-button {
+    margin-top: 113px;
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .contacts-page {
+    &__wrapper-content {
+      // -webkit-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+    // &__wrapper-content {
+    //   flex-direction: column;
+    // }
+    &__image-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrapper-content-infos {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .contacts-page {
+    padding: 15px;
+    &__contacts-image {
+      width: 200px;
+      height: 300px;
+    }
+
+    &__wrapper-content {
+      gap: 20px;
+      padding: 0px;
+    }
+
+    &__send-button {
+      height: 40px;
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__second-subtitle {
+      font-size: 14px;
+    }
+    &__input {
+      margin-bottom: 20px;
+      height: 40px;
+    }
+
+    &__input-message {
+      height: 200px;
+    }
+
+    &__resume-button {
+      gap: 20px;
+    }
+  }
+}

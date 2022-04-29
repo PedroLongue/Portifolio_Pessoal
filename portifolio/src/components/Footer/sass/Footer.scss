@@ -1,0 +1,19 @@
+@import "../../../global.scss";
+
+.footer-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0px 15px;
+  background: $purple-200;
+  gap: 50px;
+
+  &__links {
+    list-style: none;
+  }
+
+  &__image {
+    width: 25px;
+  }
+}
