@@ -5,6 +5,7 @@ import ContactsIcon from "../../assets/images/contactsIcon.png";
 import LinkIcon from "../../assets/images/linkIcon.png";
 
 const Contacts = () => {
+  const [sucessMessage, setSucessMessage] = useState(false);
   const [contact, setContact] = useState({
     name: "",
     email: "",
@@ -39,7 +40,9 @@ const Contacts = () => {
           type: "success",
           message: "Thank you for reaching out to us.",
         });
-        alert("Mensagem enviada!!");
+        // alert("Mensagem enviada!!");
+        setSucessMessage(true);
+        // console.log(sucessMessage);
       } else {
         setResponse({
           type: "error",
@@ -103,6 +106,9 @@ const Contacts = () => {
                 value="Enviar"
               />
             </form>
+            <span className={sucessMessage ? "messageActive" : "MessageOff"}>
+              Mensagem enviada!
+            </span>
           </div>
           <div className="contacts-page__image-wrapper">
             <img

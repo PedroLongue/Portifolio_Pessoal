@@ -99,7 +99,7 @@ const Carousel = () => {
         <img
           className="slick-slider-page__image"
           src={InstitutionalPage}
-          alt="icone RFID"
+          alt="icone institucional"
         />
         <span className="slick-slider-page__text">
           Página institucional desenvolvida em React JS.
@@ -124,10 +124,10 @@ const Carousel = () => {
         <img
           className="slick-slider-page__image"
           src={TouristPage}
-          alt="icone RFID"
+          alt="icone Turistas"
         />
         <span className="slick-slider-page__text">
-          Página institucional desenvolvida em React JS.
+          Sistema desenvolvido em HTML, CSS e Js.
         </span>
         <a
           className="slick-slider-page__button slick-slider-page__link"
